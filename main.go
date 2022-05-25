@@ -1,20 +1,21 @@
 package main
 
 import (
-	"git.imooc.com/cap1573/cart/common"
-	"git.imooc.com/cap1573/cart/domain/repository"
-	service2 "git.imooc.com/cap1573/cart/domain/service"
-	"git.imooc.com/cap1573/cart/handler"
-	cart "git.imooc.com/cap1573/cart/proto/cart"
+	"github.com/caoxiangfei/cart/common"
+	"github.com/caoxiangfei/cart/domain/repository"
+	service2 "github.com/caoxiangfei/cart/domain/service"
+	"github.com/caoxiangfei/cart/handler"
+	cart "github.com/caoxiangfei/cart/proto/cart"
+	"github.com/micro/go-micro/v2"
+	"github.com/opentracing/opentracing-go"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	consul2 "github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	opentracing2 "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
-	"github.com/opentracing/opentracing-go"
 )
 
 var QPS = 100

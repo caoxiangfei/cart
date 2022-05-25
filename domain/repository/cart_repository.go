@@ -2,7 +2,7 @@ package repository
 
 import (
 	"errors"
-	"git.imooc.com/cap1573/cart/domain/model"
+	"github.com/caoxiangfei/cart/domain/model"
 	"github.com/jinzhu/gorm"
 )
 
